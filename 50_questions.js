@@ -407,7 +407,7 @@ console.log(object.job === undefined);
 //? 4) Using optaional chaining
 console.log(object?.job); */
 
-//* 20) This Keyword : This keyword refers to the object which executing the current function. Its value is determined by how a function is called.
+//* 18) This Keyword : This keyword refers to the object which executing the current function. Its value is determined by how a function is called.
 
 //? In a method
 /* let person = {
@@ -439,7 +439,7 @@ function personFun(name) {
 const personObj = new personFun('Kuldeep');
 console.log(personObj.greet()); */
 
-//* 21) Ways to loop through an array
+//* 19) Ways to loop through an array
 
 /* let fruits = ["apple", "banana", "orange", "mango"];
 
@@ -484,7 +484,7 @@ fruits.map((fruit) => {
 });
  */
 
-//* 22) Add or remove elements from an array
+//* 20) Add or remove elements from an array
 /* let fruits = ['apple', 'banana', 'mango'];
 
 //? Adding element
@@ -505,7 +505,7 @@ fruits.splice(2, 1, 'kiwi', 'orange'); // removing from certain index with speci
 
 console.log(fruits); */
 
-//* 23) Use of map function
+//* 21) Use of map function
 
 /* let numbers = [1, 2, 3, 4, 5];
 
@@ -516,7 +516,7 @@ const numberObjects = numbers.map((num) => ({ value: num, square: num ** 2 }));
 console.log(numberObjects);
  */
 
-//* 24) filter and find methods : Find return when a single matched value is found or true the condition and does not check further, but filter returns all the elements which satifies the condition.
+//* 22) filter and find methods : Find return when a single matched value is found or true the condition and does not check further, but filter returns all the elements which satifies the condition.
 
 /* const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
@@ -529,7 +529,7 @@ const firstEvenNumber = numbers.find((number) => number % 2 === 0);
 console.log(firstEvenNumber);
  */
 
-//* 25) Difference between some and every method
+//* 23) Difference between some and every method
 
 /* const people = [
   { name: "Kuldeep Verma", age: 21 },
@@ -546,7 +546,7 @@ const allover20 = people.every(person => person.age > 20);
 console.log(allover20);
  */
 
-//* 26) Select an element in DOM using JS
+//* 24) Select an element in DOM using JS
 
 /* //? Using getElementById
 const divById = document.getElementById('myDiv');
@@ -568,7 +568,7 @@ console.log(pByQuerySelector);
 const allParagrphs = divById.querySelectorAll('p');
 console.log(allParagrphs); */
 
-//* 27) Create and append an element in DOM
+//* 25) Create and append an element in DOM
 /* const newParagraph = document.createElement('p');
 
 newParagraph.textContent = 'This is a new paragraph.';
@@ -580,14 +580,14 @@ const div = document.getElementById('myDiv');
 
 div.insertAdjacentElement('beforebegin', newParagraph); */
 
-//* 28) innerHTML and textContent
+//* 26) innerHTML and textContent
 
 /* const div = document.querySelector('.myClass');
 
 console.log(div.innerHTML);
 console.log(div.textContent); */
 
-//* 29) Remove an element using DOM
+//* 27) Remove an element using DOM
 
 // const div = document.querySelector(".myClass");
 // const firstParagraph = document.querySelector("p");
@@ -598,7 +598,7 @@ console.log(div.textContent); */
 //? Method - 2) Newer but does not support in older browsers
 // firstParagraph.remove();
 
-//* 30) Arrow function
+//* 28) Arrow function
 /* 
 const add = (a, b) => a + b;
 
@@ -617,7 +617,7 @@ let obj = {
 obj.sayHello();
 obj.sayHelloArrow(); // arrow function does not bind their own this. refer to global window object. */
 
-//* 31) Destructuring
+//* 29) Destructuring
 
 //? Object destructuring
 /* let person = {
@@ -641,7 +641,7 @@ const fruits = ['apple', 'banana', 'mango', 'watermelon'];
 const [first, second, third, fourth] = fruits;
 console.log(first, second, third, fourth); */
 
-//* 32) Template Literals
+//* 30) Template Literals
 
 /* const myName = "Kuldeep Verma";
 const age = 21;
@@ -664,7 +664,7 @@ const multiLine = `
 console.log(multiLine);
  */
 
-//* 33) Spread Operator
+//* 31) Spread Operator
 
 /* //? Spreading array
 const arr1 = [1, 2, 3];
@@ -693,7 +693,7 @@ const string = 'Hello';
 const stringArr = [...string];
 console.log(stringArr); */
 
-//* 34) Default Parameter
+//* 32) Default Parameter
 /* 
 // Using default parameter
 function greet(name = "Guest") {
@@ -711,7 +711,7 @@ function multiply(a, b = a * 2) {
 multiply(5);
 multiply(5, 3); */
 
-//* 35) Rest parameter
+//* 33) Rest parameter
 
 /* //? Normal function
 function sumES6(...numbers) {
@@ -746,7 +746,7 @@ const logAll = (...args) => console.log(args);
 logAll(1, 2, 3, 4, 5, 6, "Kuldeep Verma", { age: 21 });
  */
 
-//* 36) Callback function and callback hell
+//* 34) Callback function and callback hell
 
 //? Callback function
 
@@ -782,7 +782,7 @@ step(1, () => {
 });
  */
 
-//* 37) Promise
+//* 35) Promise
 
 /* function fetchData() {
   return new Promise((resolve, reject) => {
@@ -803,7 +803,7 @@ fetchData()
 
 */
 
-//* 38) Promise chaining
+//* 36) Promise chaining
 
 /* function step(num) {
   return Promise.resolve(`Step ${num} completed...`);
@@ -838,7 +838,7 @@ step(1)
   .catch((err) => console.error(err));
  */
 
-//* 39) Promise.all method
+//* 37) Promise.all method
 
 /* const promise1 = Promise.resolve(3);
 const promise2 = new Promise((resolve) => setTimeout(() => resolve(42), 2000));
@@ -848,7 +848,7 @@ let status = Promise.all([promise1, promise2])
 .catch((err) => console.error(err));
  */
 
-//* 40) Finally method
+//* 38) Finally method
 /* 
 function fetchData() {
   return new Promise((resolve, reject) => {
@@ -879,7 +879,7 @@ const getData = async () => {
 getData();
  */
 
-//* 41) Async await
+//* 39) Async await
 
 /* const fetchData = () => {
   return new Promise((resolve, reject) => {
@@ -898,21 +898,21 @@ const getData = async () => {
 
 getData(); */
 
-//* 42) Default and Named Export  - Watch school4u video for it
+//* 40) Default and Named Export  - Watch school4u video for it
 
-//* 43) JS object to JSON string
+//* 41) JS object to JSON string
 
 // let obj = {name: 'Kuldeep Verma', age: 21};
 
 // let jsonString = JSON.stringify(obj);
 // console.log(jsonString);
 
-//* 44) Parse json into object again
+//* 42) Parse json into object again
 
 // let originalObj = JSON.parse(jsonString);
 // console.log(originalObj);
 
-//* 45) Localstorage data store and retreive
+//* 43) Localstorage data store and retreive
 
 /* //? Set data
 localStorage.setItem("username", "Kuldeep");
@@ -935,11 +935,11 @@ localStorage.setItem('user', JSON.stringify(user));
 //? Getting object data from localstorage
 console.log(JSON.parse(localStorage.getItem('user'))); */
 
-//* 46) LocalStorage vs Session Storage
+//* 44) LocalStorage vs Session Storage
 // localStorage.setItem('user', 'Kuldeep');
 // sessionStorage.setItem('session_user', 'Kushagra');
 
-//* 48) Clear all data from localstorage
+//* 45) Clear all data from localstorage
 localStorage.setItem("password", "kuldeep123");
 localStorage.setItem("email", "kuldeep@gmail.com");
 
@@ -949,6 +949,6 @@ localStorage.setItem("email", "kuldeep@gmail.com");
 //? All item removal
 localStorage.clear();
 
-//* 49) Difference between async/awit and promises - Async await make code behavior look like synchronous code, making it more readale and simplify the syntax of working with promises, while promises are complex to read and write.
+//* 46) Difference between async/awit and promises - Async await make code behavior look like synchronous code, making it more readale and simplify the syntax of working with promises, while promises are complex to read and write.
 
-//* 50) How do handle errors in async await - Using try catch
+//* 47) How do handle errors in async await - Using try catch
